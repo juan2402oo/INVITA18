@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0c0d0c">
+  <meta name="theme-color" content="#15181c">
   <meta name="description" content="Invitación a los 18 años de Ricardo Jose Diaz Gonzales">
   <title>Ricardo Jose | 18 años</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="audio-gate" id="audio-gate">
+    <button class="audio-gate__button" id="start-invitation" type="button">
+      <span>✦</span>
+      <strong>Ingresar a la celebración</strong>
+      <small>Con música de fondo</small>
+    </button>
+  </div>
   <main class="invitation-shell">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__grain"></div>
@@ -55,7 +62,7 @@
           <div class="detail__icon">♢</div>
           <p class="detail__label">Con cariño</p>
           <h3>Mis<br>padrinos</h3>
-          <p class="detail__names"><span>Karina Rodriguez Yataco</span><span>Héctor Yataco</span></p>
+          <p class="detail__names"><span>Karina Rodriguez Yataco</span><span>Héctor Yataco Sotelo</span></p>
         </article>
         <article class="detail reveal">
           <span class="detail__index">04</span>
@@ -63,9 +70,10 @@
           <p class="detail__label">Una noche especial</p>
           <h3>Pequeña<br>galería</h3>
           <div class="detail-gallery" aria-label="Galería de fotos de la celebración">
-            <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&amp;fit=crop&amp;w=500&amp;q=85" alt="Celebración elegante" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&amp;fit=crop&amp;w=500&amp;q=85" alt="Salón preparado para una celebración" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&amp;fit=crop&amp;w=500&amp;q=85" alt="Luces de una noche especial" loading="lazy">
+            <img src="1.jpeg" alt="Foto 1 de la celebración" loading="lazy">
+            <img src="2.jpeg" alt="Foto 2 de la celebración" loading="lazy">
+            <img src="3.jpeg" alt="Foto 3 de la celebración" loading="lazy">
+            <img src="4.jpeg" alt="Foto 4 de la celebración" loading="lazy">
           </div>
         </article>
       </div>
@@ -107,6 +115,7 @@
       <p class="closing__initials">R J D G</p>
     </section>
   </main>
+  <audio id="background-music" src="musica.mp3" autoplay loop preload="auto" aria-hidden="true"></audio>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,5 +1,28 @@
 const eventDate = new Date('2026-10-02T22:00:00-05:00').getTime();
 const numberFormatter = new Intl.NumberFormat('es-ES', { minimumIntegerDigits: 2, useGrouping: false });
+const backgroundMusic = document.querySelector('#background-music');
+const audioGate = document.querySelector('#audio-gate');
+const startInvitation = document.querySelector('#start-invitation');
+
+function startBackgroundMusic() {
+  if (!backgroundMusic) return;
+  if (!backgroundMusic.paused) {
+    audioGate?.classList.add('is-hidden');
+    return;
+  }
+
+  backgroundMusic.play().then(() => {
+    audioGate?.classList.add('is-hidden');
+    document.removeEventListener('pointerdown', startBackgroundMusic);
+    document.removeEventListener('keydown', startBackgroundMusic);
+  }).catch(() => {
+  });
+}
+
+document.addEventListener('DOMContentLoaded', startBackgroundMusic, { once: true });
+document.addEventListener('pointerdown', startBackgroundMusic);
+document.addEventListener('keydown', startBackgroundMusic);
+startInvitation?.addEventListener('click', startBackgroundMusic);
 
 function updateCountdown() {
   const remaining = Math.max(0, eventDate - Date.now());
