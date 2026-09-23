@@ -62,10 +62,11 @@ a { color: inherit; }
 .detail__names { display: flex; flex-direction: column; gap: 10px; margin: 25px 0 0; }
 .detail__names span { display: block; color: var(--ink); font: 600 16px/1.05 var(--serif); }
 .detail__names span + span { color: var(--ink); font-size: 16px; }
-.sponsor-ornament { position: absolute; top: 54px; right: 22px; display: flex; flex-direction: column; align-items: center; gap: 15px; color: rgba(96,106,116,.4); }
-.sponsor-ornament::before { content: ''; width: 68px; height: 68px; border: 1px solid rgba(96,106,116,.24); border-radius: 50%; }
-.sponsor-ornament__tie { position: absolute; top: 16px; width: 29px; height: 70px; background: linear-gradient(135deg, #68737e, #aeb7c0 48%, #59636e); clip-path: polygon(31% 0, 69% 0, 76% 18%, 59% 31%, 79% 92%, 50% 100%, 21% 92%, 41% 31%, 24% 18%); filter: drop-shadow(3px 4px 0 rgba(11,13,16,.12)); }
-.sponsor-ornament strong { font: 500 24px var(--serif); letter-spacing: .08em; }
+.sponsor-ornament { position: absolute; top: 54px; right: 22px; display: flex; flex-direction: column; align-items: center; gap: 10px; color: rgba(96,106,116,.55); }
+.sponsor-ornament__seal { display: flex; align-items: center; justify-content: center; gap: 5px; width: 92px; height: 92px; border: 1px solid rgba(96,106,116,.32); border-radius: 50%; outline: 1px solid rgba(96,106,116,.18); outline-offset: 6px; background: rgba(156,166,176,.08); }
+.sponsor-ornament__seal b { font: 500 29px var(--serif); }
+.sponsor-ornament__seal i { font: normal 13px var(--sans); color: var(--gold); }
+.sponsor-ornament small { font-size: 8px; letter-spacing: .24em; }
 .detail-highlight { display: flex; flex-direction: column; gap: 8px; width: min(100%, 190px); margin: 23px 0 18px; padding: 12px 0 12px 13px; border-left: 2px solid var(--gold); background: linear-gradient(90deg, rgba(156,166,176,.12), transparent); }
 .detail-highlight span { color: #77776e; font-size: 9px; letter-spacing: .15em; }
 .detail-highlight b { color: var(--gold); font-size: 8px; letter-spacing: .13em; }
